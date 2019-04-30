@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--John Snyder Guerrero Riascos-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Solicitud de Empleo</title>
+    <link rel="stylesheet" type="text/css"  href="estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+    <header>
+    <h2 align="center"><strong>SOLICITUD DE EMPLEO</strong></h2>
+    </header>
+    <div id="principal", class="table-responsive">
+        <aside></aside> 
+        <form action="guardar.html", method="GET">
+            <table align="center", class="table-hover", border="10">
+                <tr>
+                    <td>Fecha de Solicitud</td>
+                    <td><input class="form-control"type="date" name="fech_soli" id="fech_soli" required></td>
+                    <td>Cargo Solicitado:</td>
+                    <td colspan="3"><input class="form-control" type="text" name="cargo" id="cargo" required></td>
+                </tr>
+                <tr class="table-secondary">
+                    <td colspan="6", align="center" id="Titulo"><strong>DATOS PERSONALES</strong></td>
+                </tr>
+                <tr>
+                    <td >Nombres:</td>
+                    <td><input class="form-control" type="text", name="nombres", placeholder="Nombres" required></td>
+                    <td >Primer Apellido</td>
+                    <td><input class="form-control" type="text", name="p_apellido", placeholder="Primer Apellido" required></td>
+                    <td >Segundo Apellido</td>
+                    <td><input class="form-control" type="text", name="s_apellido", placeholder="Segundo Apellido"></td>
+                </tr>
+                <tr>
+                    <td>Tipo de Documento</td>
+                    <td>
+                        <input class="form-control" type="text" name="tipo_documento" list="tipo_documento", required>
+                        <datalist id="tipo_documento">
+                            <option label="Cedula de Ciudadanía" value="CC">
+                            <option label="Tarjeta de Identidad" value="TI">
+                            <option label="Cedula de Extranjería" value="CE">
+                        </datalist>
+                    </td>
+                    <td>Numero de Documento:</td>
+                    <td><input class="form-control" type="number" name="num_documento" id="num_documento" required></td>
+                    <td>Foto (.jpg,.png)</td>
+                    <td><input class="form-control "type="file" name="foto" id="foto" accept="image/jpeg, image/png"
+                         required ></td>
+                </tr>
+                <tr>
+                    <td>Fecha de Nacimiento:</td>
+                    <td><input class="form-control" type="date", name="fech_nacimiento" required></td>
+                    <td>Ciudad de Nacimiento:</td>
+                    <td><input class="form-control"type="text", name="ciu_nacimiento" required></td>
+                    <td>Sexo</td>
+                    <td><input type="radio", name="sexo", checked>M
+                        <input type="radio", name="sexo">F    
+                    </td> 
+                </tr>
+                <tr class="table-secondary">
+                    <td colspan="6", align="center" id="Titulo"><strong>CONTACTO</strong></td>
+                </tr>
+                <tr>
+                    <td>Telefono 1:</td>
+                    <td><input class="form-control" type="tel" name="telefono1" id="telefono1" required></td>
+                    <td>Telefono 2:</td>
+                    <td><input class="form-control" type="tel" name="telefono2" id="telefono2" ></td>
+                    <td>Email:</td>
+                    <td><input class="form-control" type="email" pattern="[a-z0-9]+@[a-z0-9]+.[a-z]{2,3}$"
+                         name="email" id="email" required></td>
+                </tr>
+                <tr >
+                    <td >Direccion de Residencia Actual:</td>
+                    <td ><input class="form-control" type="text", name="direccion",required></td>
+                    <td >Ciudad de Residencia Actual:</td>
+                    <td ><input class="form-control" type="text", name="ciu_residencia",required></td>
+                </tr>
+                <tr class="table-secondary">
+                    <td colspan="6", align="center" id="Titulo"><strong>DATOS FAMILIARES (Personas del nucleo familiar)</strong></td>
+                </tr>
+                <tr>
+                    <td id="familiares" colspan="6" name="familiares">
+                        <table align="center">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombres</th>
+                                    <th scope="col">Apellidos</th>
+                                    <th scope="col">Parentezco</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><input class="form-control" type="text" name="1FamNom" required></td>
+                                    <td><input class="form-control" type="text" name="1FamApe" required></td>
+                                    <td><input class="form-control" type="text" name="1FamPar" required></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td><input class="form-control" type="text" name="2FamNom" required></td>
+                                    <td><input class="form-control" type="text" name="2FamApe" required></td>
+                                    <td><input class="form-control" type="text" name="2FamPar" required></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td><input class="form-control" type="text" name="3FamNom" ></td>
+                                    <td><input class="form-control" type="text" name="3FamApe" ></td>
+                                    <td><input class="form-control" type="text" name="3FamPar" ></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td><input class="form-control" type="text" name="4FamNom" ></td>
+                                    <td><input class="form-control" type="text" name="4FamApe" ></td>
+                                    <td><input class="form-control" type="text" name="4FamPar" ></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="table-secondary">
+                    <td colspan="6", align="center" id="Titulo"><strong>DATOS LABORALES</strong></td>
+                </tr>
+                <tr>
+                    <td>Ultima empresa:</td>
+                    <td><input class="form-control" type="text" name="ult_empresa" id="ult_empresa"></td>
+                    <td>Cargo:</td>
+                    <td><input class="form-control" type="text" name="cargo" id="cargo" ></td>
+                    <td>Salario:</td>
+                    <td><input class="form-control" type="number" name="salario" id="salario" ></td>
+                </tr>
+                <tr>
+                    <td>Tel Ultima empresa:</td>
+                    <td><input class="form-control" type="tel" name="tel_ult_emp" id="tel_ult_emp"></td>
+                    <td>Dir Ultima empresa:</td>
+                    <td><input class="form-control" type="text" name="dir_ult_emp" id="dir_ult_emp"></td>
+                </tr>
+                <tr class="table-secondary">
+                    <td colspan="6", align="center" id="Titulo"><strong>ESTUDIOS</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Estudios culminados </td>
+                    <td colspan="3">Estudios en curso</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <ul>
+                            <li><input type="checkbox" value="primaria">  Primaria </li>
+                            <li><input type="checkbox" value="secundaria">  Secundaria</li>
+                            <li><input type="checkbox" value="tecnico">  Tecnico </li>
+                            <li><input type="checkbox" value="tecnlogo">  Tecnologo </li>
+                            <li><input type="checkbox" value="otro">  Otro </li>
+                        </ul>
+                    </td>
+                    <td colspan="3">
+                        <ul>
+                            <li><input type="checkbox" value="primaria">  Primaria </li>
+                            <li><input type="checkbox" value="secundaria">  Secundaria</li>
+                            <li><input type="checkbox" value="tecnico">  Tecnico </li>
+                            <li><input type="checkbox" value="tecnlogo">  Tecnologo </li>
+                            <li><input type="checkbox" value="otro">  Otro </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="table-secondary">
+                    <td colspan="6", align="center" id="Titulo"><strong>HOJA DE VIDA</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Si lo Desea anexe su hoja de vida en formato pdf.</td>
+                    <td><input class="form-control" type="file" name="hdv" id="hdv" accept="application/pdf"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="6", align="center"><input type="submit" class="btn btn-secondary btn-lg btn-block" value="Enviar"></td>
+                </tr>
+            </table>
+        </form>
+        <aside></aside> 
+    </div>
+    <footer><b>Snyder Guerrero</b></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
